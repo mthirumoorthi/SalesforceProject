@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Slotsdata">
+        
+            <template for:each={centerData} for:item="center">
+                 <p key={center.name}>Center Name: {center.name} </p>
+                 <p key={center.name}>center Address:{center.address}</p>
+           
+
+                <template for:each={center.sessions} for:item="session">
+Date:{session.date}
+Capacity:{session.available_capacity}
+              
+                Slots are:
+                <template for:each={session.slots} for:item="slot">
+                  {slot}  
+                </template>
+             </template>
+            </template>
+    </lightning-card>
+    
+</template>

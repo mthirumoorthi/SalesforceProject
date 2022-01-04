@@ -1,0 +1,25 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size=4>
+            <ul>
+            <template for:each={meetingRoominfos} for:item="meetingroom">
+                <li key={meetingroom.roomno}>
+                <c-meeting-room-child-for-event-trigger meeting-room-input={meetingroom} ontileclickinchild={tileclickinchildHandler} >
+                  
+                </c-meeting-room-child-for-event-trigger>
+            </li>
+            </template>
+        </ul>
+        </lightning-layout-item>
+        <lightning-layout-item size=4>
+            Clicked meeting room is {selectedmeetingRoominfo}
+        </lightning-layout-item>
+        <lightning-layout-item size=4>
+            Clicked meeting Capacity is {selectedmeetingRoomCapacity}
+        </lightning-layout-item>
+    </lightning-layout>
+
+   
+
+    
+</template>

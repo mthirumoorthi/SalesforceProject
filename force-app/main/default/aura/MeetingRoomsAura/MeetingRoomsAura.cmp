@@ -1,0 +1,49 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name='meetingRoominfo' type='List'>        
+    </aura:attribute>
+    <aura:attribute name='selectedmeetingRoominfo' type='String'>        
+    </aura:attribute>
+    <aura:attribute name='selectedmeetingRoomCapacity' type='String'>        
+    </aura:attribute>
+    <aura:handler name='init' value="{!this}" action="{!c.doint}"></aura:handler>
+    <lightning:card title="Meeting Rooms">
+    <lightning:layout>
+        <lightning:layoutItem size='4'>
+            <ul>
+                <aura:iteration items="{!v.meetingRoominfo}" var="item">                    
+                    <li style="padding: 10px">
+                        <c:meetingRoomChildForEventTrigger meetingRoomInput="{!item}"  ontileclickinchild="{!c.tileclickinchildHandler}"></c:meetingRoomChildForEventTrigger>
+                    </li>
+                </aura:iteration>           
+            </ul>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="4">
+            Clicked meeting room is {!v.selectedmeetingRoominfo}
+        </lightning:layoutItem>
+        <lightning:layoutItem size="4">
+            Clicked meeting Capacity is {!v.selectedmeetingRoomCapacity}
+        </lightning:layoutItem> 
+    </lightning:layout>
+    </lightning:card>
+
+   
+
+    <!-- <lightning-layout>
+        <lightning-layout-item size=4>
+            <ul>
+            <template for:each={meetingRoominfos} for:item="meetingroom">
+                <li key={meetingroom.roomno}>
+                <c-meeting-room-child-for-event-trigger meeting-room-input={meetingroom} ontileclickinchild={tileclickinchildHandler} >
+                  
+                </c-meeting-room-child-for-event-trigger>
+            </li>
+            </template>
+        </ul>
+        </lightning-layout-item>
+        <lightning-layout-item size=4>
+            Clicked meeting room is {selectedmeetingRoominfo}
+        </lightning-layout-item>
+        <lightning-layout-item size=4>
+            Clicked meeting Capacity is {selectedmeetingRoomCapacity}
+        </lightning-layout-item> -->
+</aura:component>	

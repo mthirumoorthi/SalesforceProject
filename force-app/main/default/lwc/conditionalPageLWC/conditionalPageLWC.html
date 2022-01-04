@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Click me">
+    <div class="divclassClickme">Click me</div>
+    <lightning-input type="checkbox" onchange={onCheckboxChange}></lightning-input>
+        <template if:true={blnShowMe}>
+            <div class='showmediv'>Show me</div>
+        </template>
+        <template if:false={blnShowMe}>
+            <div class='showmediv'>hide me</div>
+        </template>
+        
+        <template for:each={cityList} for:item='city'>
+              
+                <p key={city}>{city}</p>
+               
+        </template>
+
+        <template iterator:it={cityListsort}>
+            <p key={it.value}>{it.first}</p>
+            <p key={it.value}>{it.last}</p>
+            <p key={it.value}>{it.value}</p>
+        </template>
+   
+
+    </lightning-card>
+    
+</template>

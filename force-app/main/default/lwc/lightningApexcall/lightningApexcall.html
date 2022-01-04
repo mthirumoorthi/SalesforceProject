@@ -1,0 +1,29 @@
+<template>
+    <lightning-button label='Submit' onclick={btnClick}></lightning-button>
+
+    <lightning-card title="LDS Apex Call impertaive">
+        <ul>
+        <template for:each={Accounts} for:item="acc">
+            <li key={acc.id}>
+                    <lightning-tile label={acc.Name} href="/path/to/somewhere">
+                        <p class="slds-truncate" title={acc.Phone}>acc.Phone</p>
+                    </lightning-tile>
+            </li>
+        </template>
+    </ul>
+
+    </lightning-card>
+
+    <lightning-card title="LDS Apex Call">
+        <ul>
+        <template for:each={Accs.data} for:item="acc">
+            <li key={acc.id}>
+                    <lightning-tile label={acc.Name} href="/path/to/somewhere">
+                        <p class="slds-truncate" title={acc.Phone}>acc.Phone</p>
+                    </lightning-tile>
+            </li>
+        </template>
+    </ul>
+
+    </lightning-card>
+</template>

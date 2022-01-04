@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <lightning-layout>
+            <lightning-layout-item size=6>
+        <lightning-record-edit-form object-api-name="Account" onsuccess={successHandler}>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-button type="submit" label="Create Account"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-layout-item>
+    <lightning-layout-item size=6>
+       <lightning-record-view-form record-id={recordid} object-api-name="Account">
+           <lightning-output-field field-name="Name"></lightning-output-field>
+           <lightning-output-field field-name="OwnerId"></lightning-output-field>
+       </lightning-record-view-form>
+    </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+    
+
+   
+   
+    
+</template>

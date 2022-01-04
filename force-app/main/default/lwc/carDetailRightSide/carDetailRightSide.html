@@ -1,0 +1,53 @@
+<template>
+    <lightning-card icon-name="utility:all" title="Car Right Panel">
+    <lightning-layout>
+        <lightning-layout-item>         
+    
+            <lightning-tabset active-tab-value={selectedtabvalue}>
+                <lightning-card>
+                    <div slot="actions">
+                        <lightning-button label="Full Details" onclick={fullDetails}></lightning-button>
+                    </div>
+                <lightning-tab label="Car Detail" onactive={tabchangeHandler}>
+                    <template if:true={carfound}>
+                    <lightning-layout>
+                        
+                        
+<lightning-layout-item size=6>
+   
+   
+    <lightning-formatted-text value={carName}></lightning-formatted-text><br/>
+    <lightning-formatted-number value={carMile}></lightning-formatted-number>
+</lightning-layout-item>
+<lightning-layout-item size=6>
+    <img src={carImage} alt='Car'>
+</lightning-layout-item>
+                    </lightning-layout>
+                </template>
+                </lightning-tab>
+            </lightning-card>
+                <lightning-tab label="Add Experience" onactive={tabchangeHandler} title="2nd tab extended title">
+                 
+                    <lightning-layout multiple-rows>
+                        <lightning-layout-item size="12">
+                            <lightning-input label="Title" onchange={handleTitleHandler}></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <lightning-input-rich-text label="Description" onchange={handleDescriptionHandler}></lightning-input-rich-text>
+                        </lightning-layout-item>
+                        <lightning-layout-item >
+                            <lightning-button variant="brand" label="Add Experience" title="Primary action" onclick={addExperienceHandler} class="slds-m-left_x-small"></lightning-button>
+
+
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                </lightning-tab>
+                <lightning-tab label="View Experience" onactive={tabchangeHandler}>
+                   
+                </lightning-tab>
+            </lightning-tabset>
+        </lightning-layout-item>
+    </lightning-layout>
+</lightning-card>
+</template>

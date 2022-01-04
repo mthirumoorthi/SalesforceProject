@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title={title}>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size=12 padding="around-medium">
+            <lightning-input type="number" label="Height" onchange={onchangeHeight}>
+
+            </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size=12>
+                <lightning-input type="number" label="Weight" onchange={onchangeWeight}>
+    
+                </lightning-input>
+                </lightning-layout-item>
+
+            <lightning-layout-item size=12>
+                
+                <lightning-button class='btncolor' label="Click me" onclick={Clickbtn}>
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout>
+           
+
+            <lightning-layout-item>
+                
+               <p>results: {getbmiValue}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

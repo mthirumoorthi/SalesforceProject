@@ -1,0 +1,12 @@
+<template>
+ 
+    <lightning-button label="trigger event by programmtically" onclick={tileclickbyProgram}></lightning-button>
+    <div style='border:red,5px;'  onclick={tileclick}>
+    <lightning-card title="Result">
+       
+        <lightning-tile label={meetingRoomInput.roomno}>
+            <p class="slds-truncate" title={meetingRoomInput.roomno}>{meetingRoomInput.Capacity}</p>
+        </lightning-tile>
+    </lightning-card>
+</div>
+</template>

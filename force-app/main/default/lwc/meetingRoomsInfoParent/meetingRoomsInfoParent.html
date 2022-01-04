@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Room Information">
+        <lightning-input type="checkbox" onchange={CheckboxChnaged} label="Show Result">
+
+        </lightning-input>
+    <lightning-layout>
+        <lightning-layout-item padding="around-medium">
+    <ul>
+        <template for:each={meetingRoomInfos} for:item="room">
+            <li key={room.Roomno}>
+                <!-- <c-metting-room show-result={showResult} meeting-room-input={room}> </c-metting-room> -->
+                <c-metting-room show-result={showResult} meeting-room-input={room}>
+                  
+                    <lightning-tile label={room.Roomno} type="media" slot='MeetingRoominfo'>
+                        <lightning-icon slot="media" icon-name="standard:groups"></lightning-icon>
+                        <p class="slds-truncate" title={room.Capacity}>{room.Capacity}</p>
+                    </lightning-tile>
+
+                    <div>Hi thiru</div>
+
+                </c-metting-room>
+            </li>
+        </template>
+    </ul>
+</lightning-layout-item>
+</lightning-layout>
+</lightning-card>
+</template>

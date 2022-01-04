@@ -1,0 +1,20 @@
+<template>
+   
+    <lightning-card title="Set Your View">
+        <lightning-layout horizontal-align="center">
+     <lightning-layout-item > 
+        <lightning-combobox
+            name="CarType"
+            label="carType"
+            value={value}            
+            options={carTypes}
+            variant="label-hidden"
+            onchange={handleChange} ></lightning-combobox>
+        </lightning-layout-item>
+    <lightning-layout-item > 
+    <lightning-button label="New car" onclick={newButtonHandler}></lightning-button>
+
+</lightning-layout-item>
+</lightning-layout>
+</lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size=12>
+            <c-car-search oncarselectedevent={carSelectedEventHandler}></c-car-search>
+        </lightning-layout-item>
+        <lightning-layout-item size=12>
+            <c-car-detail car-type-id={carTypeid}> </c-car-detail>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

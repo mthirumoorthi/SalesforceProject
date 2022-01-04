@@ -1,0 +1,24 @@
+<template>
+    <lightning-input type="checkbox" label="showLightningCard" onchange={checkboxHandler}></lightning-input>
+   
+    <template if:true={showLightningCard}>
+        <lightning-card  title="Hello World">
+            <div class="greeting-class">Hello {dynamicGreeting}</div>
+            <lightning-input label="greetings" onchange={greetingChangeHanlder}></lightning-input>
+        </lightning-card>
+
+    </template>
+
+   results is:{resulttext}
+
+    <template for:each={cityList} for:item="city">
+        <div key={city}>{city}</div>
+    </template>
+
+    <template iterator:it={cityList}>
+        <div key={it.value} >{it.first}</div><div key={it.value}>{it.last}</div>
+        <div key={it.value}>{it.value}</div>
+    </template>
+    
+    
+</template>

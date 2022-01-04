@@ -1,0 +1,16 @@
+<template>
+    <lightning-button label="click me" onclick={AddmeetingRoomsInfo}></lightning-button>
+    <lightning-button label="send message" onclick={sendmessage}></lightning-button>
+   <c-interview-child-meeting-room >
+    <lightning-layout-item size="12" slot="meetingroominfo">
+        <template for:each={meetingRoomsInfo} for:item="meetingRoom">
+            <p key={meetingRoom.roomno}>{meetingRoom.roomno}</p>
+            <p key={meetingRoom.roomno}>{meetingRoom.capacity}</p>
+        </template>
+        
+    </lightning-layout-item>
+
+    <div>unnamed Slot</div>
+
+   </c-interview-child-meeting-room>
+</template>

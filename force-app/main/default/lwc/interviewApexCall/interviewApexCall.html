@@ -1,0 +1,10 @@
+<template>
+    <lightning-button label="Get Account" onclick={getAccount}></lightning-button>
+    <template if:true={accountexists}>
+        <!-- <template for:each={Accounts.data} for:item="acc"> -->
+    <template for:each={Accounts} for:item="acc">
+        <p key={acc.Id}>{acc.Name}</p>
+        
+    </template>
+</template>
+</template>

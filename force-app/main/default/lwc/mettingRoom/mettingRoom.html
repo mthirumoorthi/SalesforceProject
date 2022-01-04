@@ -1,0 +1,21 @@
+<template>
+    <template if:true={showResult}>
+    <lightning-tile title="Meeting Room Info">     
+        <slot name='MeetingRoominfo'> </slot >
+            <slot></slot >
+
+        <!-- <lightning-tile label={meetingRoomInput.Roomno} type="media">
+            <lightning-icon slot="media" icon-name="standard:groups"></lightning-icon>
+            <p class="slds-truncate" title={meetingRoomInput.Capacity}>{meetingRoomInput.Capacity}</p>
+        </lightning-tile> -->
+    </lightning-tile>
+</template>
+    <!-- <lightning-layout>
+        <lightning-layout-item padding="around-medium">
+            <p class="slds-truncate" title={meetingRoomInput.Roomno}>{meetingRoomInput.Roomno}</p>
+            <p class="slds-truncate" title={meetingRoomInput.Capacity}>{meetingRoomInput.Capacity}</p>
+    </lightning-layout-item>
+    </lightning-layout> -->
+
+    
+</template>

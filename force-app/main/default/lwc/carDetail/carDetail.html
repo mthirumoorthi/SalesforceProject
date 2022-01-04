@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Car Results">
+    <lightning-layout multiple-rows>
+    <template for:each={cars} for:item="car">
+        <lightning-layout-item size="3" key={car.Id}>
+         <c-car-tile car={car} ontileclickevent={tileclickeventHandler} ></c-car-tile>
+        </lightning-layout-item>
+    </template>
+</lightning-layout>
+</lightning-card>
+    
+</template>

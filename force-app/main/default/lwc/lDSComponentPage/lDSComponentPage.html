@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title='LDSPage'>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size=12>
+<lightning-input label="Name" onchange={nameChange}></lightning-input>
+<lightning-input label="Phone" type="Phone" onchange={PhoneChange}></lightning-input>
+
+            </lightning-layout-item>
+            <lightning-layout-item size=12>
+                <lightning-button label="Save Account" onclick={accountSaveClick}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size=12>             
+Acc Name<lightning-formatted-text value={AccName} ></lightning-formatted-text><br/>
+Acc Phone<lightning-formatted-phone value={AccPhone}></lightning-formatted-phone><br/>
+Acc CreatedById<lightning-formatted-text value={CreatedById}></lightning-formatted-text>
+               
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+</template>

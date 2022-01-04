@@ -1,0 +1,40 @@
+<template>
+    <lightning-card  title="Simple Calculator">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size=12 padding="around-medium">
+                FirstNumber
+                <lightning-input type='number' onchange={Firstnumberonchange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size=12 padding="around-medium">
+                SecondNumber
+                <lightning-input type='number' onchange={secondnumberonchange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-button-group>
+            <lightning-layout-item >                
+                <lightning-button icon-name="utility:add" variant="brand" label="add"  data-name="add" onclick={showresult} disabled={blnDisable} ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item >                
+                <lightning-button icon-name="utility:ban" variant="brand" label="Subtract" data-name="Subtract" onclick={showresult} disabled={blnDisable}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item >                
+                <lightning-button icon-name="utility:expand_alt" variant="brand" label="Division" data-name="Division"  onclick={showresult} disabled={blnDisable}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item >                
+                <lightning-button icon-name="utility:close" variant="brand" label="Multiply" data-name="Multiply" onclick={showresult} disabled={blnDisable}></lightning-button>
+            </lightning-layout-item>
+        </lightning-button-group>
+        </lightning-layout>
+
+    </lightning-card>
+    <lightning-card title="Results Page">
+        <p>First Number {firstNumber}</p>
+        <p>Second Number {secondNumber}</p>
+        <p>Result is {result}</p>
+        previous result are:
+        <template for:each={previousresults} for:item="prevres">
+            <p key={prevres}> {prevres}</p>
+        </template>
+        
+    </lightning-card>
+    
+</template>
