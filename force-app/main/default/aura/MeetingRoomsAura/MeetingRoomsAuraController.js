@@ -7,7 +7,7 @@
         {roomno:'B-02',Capacity:'7'},
         {roomno:'B-03',Capacity:'8'},
         {roomno:'C-01',Capacity:'9'},
-        {roomno:'C-01',Capacity:'9'}     
+        {roomno:'C-01',Capacity:'90'}     
         ]);
         console.log(component.get('v.meetingRoominfo'));
     },
