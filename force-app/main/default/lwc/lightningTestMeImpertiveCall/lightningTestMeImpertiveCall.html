@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="LDS Apex Call impertaive">
+        <lightning-button label='Submit' onclick={btnClick}></lightning-button>
+        <ul>
+            <template for:each={accountName} for:item="acc">
+                <li key={acc.id}>
+                        <lightning-tile label={acc.Name} href="/path/to/somewhere">
+                            <p class="slds-truncate" title={acc.Phone}>acc.Phone</p>
+                        </lightning-tile>
+                </li>
+            </template>
+            </ul>
+    </lightning-card>
+</template>

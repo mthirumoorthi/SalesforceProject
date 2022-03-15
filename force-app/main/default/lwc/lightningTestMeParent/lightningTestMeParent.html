@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+       
+        <lightning-layout>
+            <lightning-layout-item size=6>
+                <lightning-input name="AccName" type="text" onchange={inputChange}></lightning-input>    
+                <lightning-input name="inputFromChild" type="text" value={inputFromChild}></lightning-input>             
+               
+                <lightning-button  label="NavigatetoGoogle"  onclick={NavigatetoGoogle}></lightning-button > 
+                <lightning-button  label="NavigateToAccountHomePage" onclick={NavigateToAccountHomePage}></lightning-button > 
+            </lightning-layout-item>            
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size=6>
+                <lightning-button  variant="brand" label='Submit' onclick={PassValueToChild}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item>
+                <c-lightning-test-me-impertive-call  account-name={Accounts}></c-lightning-test-me-impertive-call>
+
+                <!--<c-lightning-test-me-impertive-call onclickevent={clickeventHandler} account-name={Accounts}></c-lightning-test-me-impertive-call>
+                    -->
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+   
+
+
+</template>

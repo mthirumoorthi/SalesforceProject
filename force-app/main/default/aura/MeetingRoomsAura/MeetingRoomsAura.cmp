@@ -46,4 +46,4 @@
         <lightning-layout-item size=4>
             Clicked meeting Capacity is {selectedmeetingRoomCapacity}
         </lightning-layout-item> -->
-</aura:component>	
+</aura:component>

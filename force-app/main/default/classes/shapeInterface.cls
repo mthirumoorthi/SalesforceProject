@@ -5,5 +5,3 @@ public  interface shapeInterface {
   Integer  shapeInput1();
     
 }
-
-

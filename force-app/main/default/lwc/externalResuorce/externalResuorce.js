@@ -24,8 +24,3 @@ export default class ExternalResuorce extends LightningElement {
     //     });
     // }
 }
-
-
-
-
-

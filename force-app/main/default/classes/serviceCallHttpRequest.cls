@@ -34,5 +34,3 @@ public with sharing class serviceCallHttpRequest {
         
         }
     }
-
-

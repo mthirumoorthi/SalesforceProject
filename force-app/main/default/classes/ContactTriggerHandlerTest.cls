@@ -46,7 +46,7 @@ Public static void makeData(){
    @istest
    public static void contactTriggerAfterUpdateInactiveTest2()
    {
-    List<Contact> contacts1=[select name,id from contact];
+        List<Contact> contacts1=[select name,id from contact];
 
       Contact objconatct=new Contact();
       objconatct.Id=contacts1[0].Id;
